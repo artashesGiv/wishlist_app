@@ -1,9 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:wishlist/app/router.gr.dart';
-import 'package:wishlist/widgets/add_wish_bottom_button.dart';
-import 'package:wishlist/widgets/app_navigation_bar.dart';
-import 'package:wishlist/widgets/main_app_bar.dart';
+import 'package:wishlist/shared/shared.dart';
 
 @RoutePage()
 class HomeScreen extends StatefulWidget {
