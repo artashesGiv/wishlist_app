@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AddWishBottomButton extends StatelessWidget {
-  const AddWishBottomButton({super.key});
+  final VoidCallback onPressed;
+
+  const AddWishBottomButton({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +11,7 @@ class AddWishBottomButton extends StatelessWidget {
       width: 70,
       height: 70,
       child: FloatingActionButton(
-        onPressed: () {},
+        onPressed: onPressed,
         tooltip: 'Increment',
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50.0),

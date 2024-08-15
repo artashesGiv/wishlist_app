@@ -26,17 +26,21 @@ class _HomeScreenState extends State<HomeScreen> {
       builder: (context, child) {
         final tabsRouter = AutoTabsRouter.of(context);
 
-        void onPressed() {
+        void goToSettings() {
           AutoRouter.of(context).push(const SettingsRoute());
+        }
+
+        void goToAddWish() {
+          AutoRouter.of(context).push(const AddWishRoute());
         }
 
         return Scaffold(
           body: child,
-          appBar: MainAppBar(onPressed: onPressed),
+          appBar: MainAppBar(onPressed: goToSettings),
           bottomNavigationBar: AppNavigationBar(
             tabsRouter: tabsRouter,
           ),
-          floatingActionButton: const AddWishBottomButton(),
+          floatingActionButton: AddWishBottomButton(onPressed: goToAddWish),
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerDocked,
         );
