@@ -8,7 +8,8 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i8;
+import 'package:auto_route/auto_route.dart' as _i9;
+import 'package:flutter/material.dart' as _i10;
 import 'package:wishlist/screens/add_wish.dart' as _i1;
 import 'package:wishlist/screens/dashboard.dart' as _i2;
 import 'package:wishlist/screens/friends.dart' as _i3;
@@ -16,11 +17,12 @@ import 'package:wishlist/screens/home.dart' as _i4;
 import 'package:wishlist/screens/notification.dart' as _i5;
 import 'package:wishlist/screens/profile.dart' as _i6;
 import 'package:wishlist/screens/settings.dart' as _i7;
+import 'package:wishlist/screens/wish.dart' as _i8;
 
 /// generated route for
 /// [_i1.AddWishScreen]
-class AddWishRoute extends _i8.PageRouteInfo<void> {
-  const AddWishRoute({List<_i8.PageRouteInfo>? children})
+class AddWishRoute extends _i9.PageRouteInfo<void> {
+  const AddWishRoute({List<_i9.PageRouteInfo>? children})
       : super(
           AddWishRoute.name,
           initialChildren: children,
@@ -28,7 +30,7 @@ class AddWishRoute extends _i8.PageRouteInfo<void> {
 
   static const String name = 'AddWishRoute';
 
-  static _i8.PageInfo page = _i8.PageInfo(
+  static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
       return const _i1.AddWishScreen();
@@ -38,8 +40,8 @@ class AddWishRoute extends _i8.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.DashboardScreen]
-class DashboardRoute extends _i8.PageRouteInfo<void> {
-  const DashboardRoute({List<_i8.PageRouteInfo>? children})
+class DashboardRoute extends _i9.PageRouteInfo<void> {
+  const DashboardRoute({List<_i9.PageRouteInfo>? children})
       : super(
           DashboardRoute.name,
           initialChildren: children,
@@ -47,7 +49,7 @@ class DashboardRoute extends _i8.PageRouteInfo<void> {
 
   static const String name = 'DashboardRoute';
 
-  static _i8.PageInfo page = _i8.PageInfo(
+  static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
       return const _i2.DashboardScreen();
@@ -57,8 +59,8 @@ class DashboardRoute extends _i8.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.FriendsScreen]
-class FriendsRoute extends _i8.PageRouteInfo<void> {
-  const FriendsRoute({List<_i8.PageRouteInfo>? children})
+class FriendsRoute extends _i9.PageRouteInfo<void> {
+  const FriendsRoute({List<_i9.PageRouteInfo>? children})
       : super(
           FriendsRoute.name,
           initialChildren: children,
@@ -66,7 +68,7 @@ class FriendsRoute extends _i8.PageRouteInfo<void> {
 
   static const String name = 'FriendsRoute';
 
-  static _i8.PageInfo page = _i8.PageInfo(
+  static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
       return const _i3.FriendsScreen();
@@ -76,8 +78,8 @@ class FriendsRoute extends _i8.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.HomeScreen]
-class HomeRoute extends _i8.PageRouteInfo<void> {
-  const HomeRoute({List<_i8.PageRouteInfo>? children})
+class HomeRoute extends _i9.PageRouteInfo<void> {
+  const HomeRoute({List<_i9.PageRouteInfo>? children})
       : super(
           HomeRoute.name,
           initialChildren: children,
@@ -85,7 +87,7 @@ class HomeRoute extends _i8.PageRouteInfo<void> {
 
   static const String name = 'HomeRoute';
 
-  static _i8.PageInfo page = _i8.PageInfo(
+  static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
       return const _i4.HomeScreen();
@@ -95,8 +97,8 @@ class HomeRoute extends _i8.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i5.NotificationScreen]
-class NotificationRoute extends _i8.PageRouteInfo<void> {
-  const NotificationRoute({List<_i8.PageRouteInfo>? children})
+class NotificationRoute extends _i9.PageRouteInfo<void> {
+  const NotificationRoute({List<_i9.PageRouteInfo>? children})
       : super(
           NotificationRoute.name,
           initialChildren: children,
@@ -104,7 +106,7 @@ class NotificationRoute extends _i8.PageRouteInfo<void> {
 
   static const String name = 'NotificationRoute';
 
-  static _i8.PageInfo page = _i8.PageInfo(
+  static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
       return const _i5.NotificationScreen();
@@ -114,8 +116,8 @@ class NotificationRoute extends _i8.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i6.ProfileScreen]
-class ProfileRoute extends _i8.PageRouteInfo<void> {
-  const ProfileRoute({List<_i8.PageRouteInfo>? children})
+class ProfileRoute extends _i9.PageRouteInfo<void> {
+  const ProfileRoute({List<_i9.PageRouteInfo>? children})
       : super(
           ProfileRoute.name,
           initialChildren: children,
@@ -123,7 +125,7 @@ class ProfileRoute extends _i8.PageRouteInfo<void> {
 
   static const String name = 'ProfileRoute';
 
-  static _i8.PageInfo page = _i8.PageInfo(
+  static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
       return const _i6.ProfileScreen();
@@ -133,8 +135,8 @@ class ProfileRoute extends _i8.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i7.SettingsScreen]
-class SettingsRoute extends _i8.PageRouteInfo<void> {
-  const SettingsRoute({List<_i8.PageRouteInfo>? children})
+class SettingsRoute extends _i9.PageRouteInfo<void> {
+  const SettingsRoute({List<_i9.PageRouteInfo>? children})
       : super(
           SettingsRoute.name,
           initialChildren: children,
@@ -142,10 +144,56 @@ class SettingsRoute extends _i8.PageRouteInfo<void> {
 
   static const String name = 'SettingsRoute';
 
-  static _i8.PageInfo page = _i8.PageInfo(
+  static _i9.PageInfo page = _i9.PageInfo(
     name,
     builder: (data) {
       return const _i7.SettingsScreen();
     },
   );
+}
+
+/// generated route for
+/// [_i8.WishScreen]
+class WishRoute extends _i9.PageRouteInfo<WishRouteArgs> {
+  WishRoute({
+    _i10.Key? key,
+    required int wishId,
+    List<_i9.PageRouteInfo>? children,
+  }) : super(
+          WishRoute.name,
+          args: WishRouteArgs(
+            key: key,
+            wishId: wishId,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'WishRoute';
+
+  static _i9.PageInfo page = _i9.PageInfo(
+    name,
+    builder: (data) {
+      final args = data.argsAs<WishRouteArgs>();
+      return _i8.WishScreen(
+        key: args.key,
+        wishId: args.wishId,
+      );
+    },
+  );
+}
+
+class WishRouteArgs {
+  const WishRouteArgs({
+    this.key,
+    required this.wishId,
+  });
+
+  final _i10.Key? key;
+
+  final int wishId;
+
+  @override
+  String toString() {
+    return 'WishRouteArgs{key: $key, wishId: $wishId}';
+  }
 }

@@ -13,6 +13,7 @@ class AppRouter extends RootStackRouter {
           AutoRoute(page: ProfileRoute.page),
         ]),
         AutoRoute(page: SettingsRoute.page),
+        AutoRoute(page: WishRoute.page),
         CustomRoute(
           page: AddWishRoute.page,
           fullscreenDialog: true,

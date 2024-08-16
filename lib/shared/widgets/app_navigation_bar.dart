@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:wishlist/app/colors.dart';
+import 'package:wishlist/shared/shared.dart';
 
 const int DASHBOARD_INDEX = 0;
 const int NOTIFICATION_INDEX = 1;
