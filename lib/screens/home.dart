@@ -33,6 +33,8 @@ class _HomeScreenState extends State<HomeScreen> {
         }
 
         return Scaffold(
+          extendBodyBehindAppBar: true,
+          extendBody: true,
           body: child,
           appBar: MainAppBar(onPressed: goToSettings),
           bottomNavigationBar: AppNavigationBar(

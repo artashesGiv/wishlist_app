@@ -1,2 +1,2 @@
-export './utils/utils.dart';
+export './bloc/bloc.dart';
 export './widgets/widgets.dart';
