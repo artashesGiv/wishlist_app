@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:wishlist/app/router.dart';
 import 'package:wishlist/app/theme.dart';
 
+final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
+
 class App extends StatefulWidget {
   const App({super.key});
 
@@ -17,7 +19,8 @@ class _AppState extends State<App> {
     return MaterialApp.router(
       title: 'Flutter Demo',
       theme: lightTheme,
-      routerConfig: _appRouter.config(),
+      routerConfig:
+          _appRouter.config(navigatorObservers: () => [routeObserver]),
     );
   }
 }
