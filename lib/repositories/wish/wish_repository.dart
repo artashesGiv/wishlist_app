@@ -23,10 +23,22 @@ class WishRepository implements AbstractWishRepository {
   @override
   Future<Wish> getWish(int id) async {
     try {
-      final response = await dio.get('http://10.0.2.2:3000/api/wish/$id');
-      dynamic data = response.data;
+      final response = await dio.get('wish/$id');
+      dynamic wish = response.data;
 
-      return Wish.fromJson(data);
+      return Wish.fromJson(wish);
+    } catch (error) {
+      throw Exception(error);
+    }
+  }
+
+  @override
+  Future<Wish> createWish(Wish wish) async {
+    try {
+      final response = await dio.post('wish', data: wish.toJson());
+      dynamic newWish = response.data;
+
+      return Wish.fromJson(newWish);
     } catch (error) {
       throw Exception(error);
     }

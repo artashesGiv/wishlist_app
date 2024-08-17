@@ -19,5 +19,10 @@ class AppRouter extends RootStackRouter {
           fullscreenDialog: true,
           transitionsBuilder: TransitionsBuilders.slideBottom,
         ),
+        CustomRoute(
+          page: EditWishRoute.page,
+          fullscreenDialog: true,
+          transitionsBuilder: TransitionsBuilders.slideBottom,
+        ),
       ];
 }

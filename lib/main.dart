@@ -5,7 +5,7 @@ import 'package:wishlist/app/app.dart';
 import 'package:wishlist/repositories/repositories.dart';
 
 void main() {
-  final dio = Dio();
+  final dio = Dio(BaseOptions(baseUrl: 'http://10.0.2.2:3000/api/'));
 
   // Initialize repositories
   GetIt.I.registerLazySingleton<AbstractWishRepository>(

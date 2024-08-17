@@ -1,16 +1,19 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:wishlist/features/feature.dart';
+import 'package:wishlist/repositories/repositories.dart';
 
 @RoutePage()
-class AddWishScreen extends StatefulWidget {
-  const AddWishScreen({super.key});
+class EditWishScreen extends StatefulWidget {
+  const EditWishScreen({super.key, required this.wish});
+
+  final Wish wish;
 
   @override
-  State<AddWishScreen> createState() => _AddWishScreenState();
+  State<EditWishScreen> createState() => _EditWishScreenState();
 }
 
-class _AddWishScreenState extends State<AddWishScreen> {
+class _EditWishScreenState extends State<EditWishScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,9 +26,9 @@ class _AddWishScreenState extends State<AddWishScreen> {
             },
           ),
         ),
-        body: const Padding(
-          padding: EdgeInsets.all(10),
-          child: EditorForm(),
+        body: Padding(
+          padding: const EdgeInsets.all(10),
+          child: EditorForm(wish: widget.wish),
         ));
   }
 }
