@@ -1,1 +1,1 @@
-export './wish_item_bloc.dart';
+export './item_bloc.dart';

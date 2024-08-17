@@ -19,11 +19,11 @@ class WishScreen extends StatefulWidget {
 }
 
 class _WishItemState extends State<WishScreen> {
-  final _wishItemBloc = WishItemBloc(GetIt.I<AbstractWishRepository>());
+  final _wishItemBloc = ItemBloc(GetIt.I<AbstractWishRepository>());
 
   @override
   void initState() {
-    _wishItemBloc.add(LoadWishItem(wishId: widget.wishId));
+    _wishItemBloc.add(LoadItem(wishId: widget.wishId));
     super.initState();
   }
 
@@ -44,13 +44,13 @@ class _WishItemState extends State<WishScreen> {
           onRefresh: () async {
             final compliter = Completer();
             _wishItemBloc
-                .add(LoadWishItem(wishId: widget.wishId, compliter: compliter));
+                .add(LoadItem(wishId: widget.wishId, compliter: compliter));
             return compliter.future;
           },
           child: BlocBuilder(
               bloc: _wishItemBloc,
               builder: (context, state) {
-                if (state is WishItemLoaded) {
+                if (state is ItemLoaded) {
                   return ListView(
                     children: [
                       Center(
@@ -59,7 +59,7 @@ class _WishItemState extends State<WishScreen> {
                     ],
                   );
                 }
-                if (state is WishItemLoadingError) {}
+                if (state is ItemLoadingError) {}
 
                 return Center(
                     child: CircularProgressIndicator(

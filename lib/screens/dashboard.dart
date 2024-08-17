@@ -19,7 +19,7 @@ class DashboardScreen extends StatefulWidget {
 }
 
 class _DashboardScreenState extends State<DashboardScreen> with RouteAware {
-  final _wishListBloc = WishListBloc(GetIt.I<AbstractWishRepository>());
+  final _wishListBloc = ListBloc(GetIt.I<AbstractWishRepository>());
 
   @override
   void didChangeDependencies() {
@@ -29,7 +29,7 @@ class _DashboardScreenState extends State<DashboardScreen> with RouteAware {
       routeObserver.subscribe(this, route);
     }
 
-    _wishListBloc.add(LoadWishList());
+    _wishListBloc.add(LoadList());
   }
 
   @override
@@ -43,7 +43,7 @@ class _DashboardScreenState extends State<DashboardScreen> with RouteAware {
 
   @override
   void didPopNext() {
-    _wishListBloc.add(LoadWishList());
+    _wishListBloc.add(LoadList());
   }
 
   @override
@@ -56,13 +56,13 @@ class _DashboardScreenState extends State<DashboardScreen> with RouteAware {
       body: CustomRefreshIndicator(
           onRefresh: () async {
             final compliter = Completer();
-            _wishListBloc.add(LoadWishList(compliter: compliter));
+            _wishListBloc.add(LoadList(compliter: compliter));
             return compliter.future;
           },
-          child: BlocBuilder<WishListBloc, WishListState>(
+          child: BlocBuilder<ListBloc, ListState>(
               bloc: _wishListBloc,
               builder: (context, state) {
-                if (state is WishListLoaded) {
+                if (state is ListLoaded) {
                   return GridView.builder(
                     padding: const EdgeInsets.only(
                         top: appBarHeight + 10,
@@ -88,9 +88,9 @@ class _DashboardScreenState extends State<DashboardScreen> with RouteAware {
                   );
                 }
 
-                if (state is WishListLoadingError) {
+                if (state is ListLoadingError) {
                   return CustomErrorWidget(onUpdate: () {
-                    _wishListBloc.add(LoadWishList());
+                    _wishListBloc.add(LoadList());
                   });
                 }
 

@@ -17,7 +17,6 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Flutter Demo',
       theme: lightTheme,
       routerConfig:
           _appRouter.config(navigatorObservers: () => [routeObserver]),
